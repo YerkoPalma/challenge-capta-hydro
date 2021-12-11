@@ -25,7 +25,6 @@ app.listen(port, async () => {
 app.post('/login', async (req, res) => {
   // recibe email/contraseña
   const { email, password } = req.body
-  console.log('/login', req.body)
   // valida en base de datos
   const user = await get(email)
   console.log(user)

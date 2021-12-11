@@ -3,20 +3,20 @@
 ## Backend
 - [x] Usar express
 - [x] Usar sequelize con SQlite
-- [ ] Implementar endpoint `/login`
-  - [ ] Recibe email/contraseña
-  - [ ] Verifica password con tabla User
-  - [ ] Crea token aleatorio si coincide password
-  - [ ] Guarda token en tabla User
-  - [ ] Retorna JSON con token
+- [x] Implementar endpoint `/login`
+  - [x] Recibe email/contraseña
+  - [x] Verifica password con tabla User
+  - [x] Crea token aleatorio si coincide password
+  - [x] Guarda token en tabla User
+  - [x] Retorna JSON con token
 - [x] Crear fixture de 100 usuarios
 - [x] Enpoint `/users`
   - [x] devuelve lista de usuarios
   - [x] página lista de usuarios
 
 ## Forntend
-- [ ] Usar [material-ui](https://mui.com/)
-- [ ] Consumir endpoint `/login`
+- [x] Usar [material-ui](https://mui.com/)
+- [x] Consumir endpoint `/login`
 - [ ] Usar react-redux (opcional)
 - [ ] Si login Ok, mostrar lista de usuarios
-- [ ] Fronend responsivo
+- [x] Fronend responsivo

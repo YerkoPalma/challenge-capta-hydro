@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Navigate } from 'react-router-dom'
 import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
@@ -33,6 +34,7 @@ export const Login = () => {
     password: '',
     email: '',
     showPassword: false,
+    redirect: ''
   })
 
   const handleChange = (prop) => (event) => {
@@ -67,12 +69,20 @@ export const Login = () => {
         token = await response.text()
         // redirect to users page
         console.log(token)
+        setValues({
+          ...values,
+          redirect: '/home'
+        })
       } else {
         setOpen(true)
       }
     // })
   }
 
+  if (values.redirect) {
+    console.log(values)
+    return <Navigate to={values.redirect}></Navigate>
+  }
   return (
   <Container maxWidth="sm">
     <Box component="form" onSubmit={handleSubmit}>
