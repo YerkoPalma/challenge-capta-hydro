@@ -3,6 +3,11 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 import { randomUUID } from 'crypto'
 import { getAll, get, update, createUsers } from '../server/controllers/Users.js'
+import { fileURLToPath } from 'url'
+import path from 'path'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 let port = process.env.PORT || 7777
 let development = process.env.NODE_ENV !== 'production'
@@ -21,6 +26,13 @@ app.listen(port, async () => {
     console.info('Usuarios agregados')
   }
 })
+
+if (process.env.NODE_ENV === `production`) {
+  app.use(express.static(path.resolve(__dirname,'../build')))
+  app.get('/*',(req,res)=>{
+      res.sendFile(path.resolve(__dirname,'../build', 'index.html'))
+  })
+}
 
 app.post('/login', async (req, res) => {
   // recibe email/contraseña

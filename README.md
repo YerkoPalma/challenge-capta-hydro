@@ -18,5 +18,25 @@
 - [x] Usar [material-ui](https://mui.com/)
 - [x] Consumir endpoint `/login`
 - [ ] Usar react-redux (opcional)
-- [ ] Si login Ok, mostrar lista de usuarios
+- [x] Si login Ok, mostrar lista de usuarios
 - [x] Fronend responsivo
+
+## Uso
+
+1. Descargar el repositorio
+
+```bash
+$ git clone https://github.com/YerkoPalma/challenge-capta-hydro.git
+```
+
+2. Instalar dependencias
+
+```bash
+$ npm install
+```
+
+3. Ejecutar en modo de desarrollo
+
+```bash
+$ npm run dev
+```

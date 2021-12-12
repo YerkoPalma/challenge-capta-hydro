@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "react-scripts build",
+    "start": "npm run build && NODE_ENV=production node server",
     "dev": "run-p start:dev start:server",
     "start:dev": "react-scripts start",
     "start:server": "node server"
