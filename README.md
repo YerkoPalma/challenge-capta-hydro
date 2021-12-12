@@ -40,3 +40,8 @@ $ npm install
 ```bash
 $ npm run dev
 ```
+
+4. Ejecutar en producción
+```bash
+$ npm start
+```
