@@ -13,7 +13,7 @@ export const Home = () => {
     setAppState({ loading: true })
     const response = await fetch('http://localhost:7777/users')
     const { users } = await response.json()
-    console.log(users)
+
     setAppState({ loading: false, users })
   }, [setAppState])
   return <Data isLoading={appState.loading} users={appState.users} />

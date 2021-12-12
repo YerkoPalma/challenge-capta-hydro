@@ -54,7 +54,6 @@ export const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log('submitted')
     // React.useEffect(async () => {
       const response = await fetch('http://localhost:7777/login', {
         method: 'POST',
@@ -80,7 +79,6 @@ export const Login = () => {
   }
 
   if (values.redirect) {
-    console.log(values)
     return <Navigate to={values.redirect}></Navigate>
   }
   return (
